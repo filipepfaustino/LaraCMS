@@ -23,4 +23,6 @@ Route::get('/admin', function() {
     return 'you are an admin or editor';
 })->middleware('admin');
 
+Route::resource('/admin/pages', 'App\Http\Controllers\Admin\PagesController');
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
